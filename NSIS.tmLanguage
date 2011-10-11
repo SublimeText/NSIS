@@ -31,7 +31,7 @@
 		</dict>
 		<dict>
 			<key>name</key>
-			<string>keyword.control.ahk</string>
+			<string>keyword.control.nsis</string>
 			<key>match</key>
 			<string>(\b|^\s*)(?i)(\!ifdef|\!ifndef|\!if|\!ifmacrodef|\!ifmacrondef|\!else|\!endif)\b</string>
 		</dict>
