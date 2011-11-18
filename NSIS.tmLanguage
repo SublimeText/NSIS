@@ -4,15 +4,15 @@
 <dict>
 	<key>comment</key>
 	<string>
-	todo:
-		- get a proper keyword.command list
-		- highlight functions
+	todo: - highlight functions
 	</string>
+
 	<key>fileTypes</key>
 	<array>
 		<string>nsi</string>
 		<string>nsh</string>
 	</array>
+
 	<key>name</key>
 	<string>NSIS Installer</string>
 	<key>patterns</key>
@@ -25,15 +25,63 @@
 		</dict>
 		<dict>
 			<key>match</key>
-			<string>(\b|^\s*)(?i)(Page|UninstPage|SetCompress|SetCompressor|SetCompressorDictSize|SetCompressorDictSize|SetDatablockOptimize|InstallDir|InstallDirRegKey|SetOutPath|WriteRegStr|WriteRegDWORD|DeleteRegKey|File|RequestExecutionLevel|OutFile|Name)\b</string>
+			<string>(\b|^\s*)(?i)(Abort|AddBrandingImage|AddSize|AllowRootDirInstall|AllowSkipFiles|AutoCloseWindow|BGFont|BGGradient|BrandingText|BringToFront|Call|CallInstDLL|Caption|ChangeUI|CheckBitmap|ClearErrors|CompletedText|ComponentText|CopyFiles|CRCCheck|CreateDirectory|CreateFont|CreateShortCut|Delete|DeleteINISec|DeleteINIStr|DeleteRegKey|DeleteRegValue|DetailPrint|DetailsButtonText|DirText|DirVar|DirVerify|EnableWindow|EnumRegKey|EnumRegValue|Exch|Exec|ExecShell|ExecWait|ExpandEnvStrings|File|FileBufSize|FileClose|FileErrorText|FileOpen|FileRead|FileReadByte|FileSeek|FileWrite|FileWriteByte|FindClose|FindFirst|FindNext|FindWindow|FlushINI|GetCurInstType|GetCurrentAddress|GetDlgItem|GetDLLVersion|GetDLLVersionLocal|GetErrorLevel|GetFileTime|GetFileTimeLocal|GetFullPathName|GetFunctionAddress|GetInstDirError|GetLabelAddress|GetTempFileName|Goto|HideWindow|Icon|IfAbort|IfErrors|IfFileExists|IfRebootFlag|IfSilent|InitPluginsDir|InstallButtonText|InstallColors|InstallDir|InstallDirRegKey|InstProgressFlags|InstType|InstTypeGetText|InstTypeSetText|IntCmp|IntCmpU|IntFmt|IntOp|IsWindow|LangString|LicenseBkColor|LicenseData|LicenseForceSelection|LicenseLangString|LicenseText|LoadLanguageFile|LogSet|LogText|MessageBox|MiscButtonText|Name|OutFile|Page|PageCallbacks|Pop|Push|Quit|ReadEnvStr|ReadINIStr|ReadRegDWORD|ReadRegStr|Reboot|RegDLL|Rename|ReserveFile|Return|RMDir|SearchPath|SectionGetFlags|SectionGetInstTypes|SectionGetSize|SectionGetText|SectionIn|SectionSetFlags|SectionSetInstTypes|SectionSetSize|SectionSetText|SendMessage|SetAutoClose|SetBrandingImage|SetCompress|SetCompressor|SetCompressorDictSize|SetCtlColors|SetCurInstType|SetDateSave|SetDetailsPrint|SetDetailsView|SetErrorLevel|SetErrors|SetFileAttributes|SetFont|SetOutPath|SetOverwrite|SetPluginUnload|SetRebootFlag|SetShellVarContext|SetSilent|ShowInstDetails|ShowUninstDetails|ShowWindow|SilentInstall|Sleep|SpaceTexts|StrCmp|StrCpy|StrLen|SubCaption|UninstallButtonText|UninstallCaption|UninstallIcon|UninstallSubCaption|UninstallText|UninstPage|UnRegDLL|Var|VIAddVersionKey|VIProductVersion|WindowIcon|WriteINIStr|WriteRegBin|WriteRegDWORD|WriteRegExpandStr|WriteRegStr|WriteUninstaller|XPStyle)\b</string>
 			<key>name</key>
 			<string>keyword.command.nsis</string>
 		</dict>
 		<dict>
-			<key>name</key>
-			<string>keyword.control.nsis</string>
 			<key>match</key>
 			<string>(\b|^\s*)(?i)(\!ifdef|\!ifndef|\!if|\!ifmacrodef|\!ifmacrondef|\!else|\!endif)\b</string>
+			<key>name</key>
+			<string>keyword.control.nsis</string>
+		</dict>
+		<dict>
+			<key>match</key>
+			<string>[!&lt;&gt;]?=|&lt;&gt;|&lt;|&gt;</string>
+			<key>name</key>
+			<string>keyword.operator.comparison.nsis</string>
+		</dict>
+		<dict>
+			<key>match</key>
+			<string>(\b|^\s*)(?i)(Function|FunctionEnd|Section|SectionEnd|SubSection|SubSectionEnd|PageEx|PageExEnd|Page|UninstPage)\b</string>
+			<key>name</key>
+			<string>support.function.nsis</string>
+		</dict>
+		<dict>
+			<key>match</key>
+			<string>(\b|^\s*)(?i)(HKCC|HKCR|HKCU|HKDD|HKLM|HKPD|HKU|MB_ABORTRETRYIGNORE|MB_DEFBUTTON1|MB_DEFBUTTON2|MB_DEFBUTTON3|MB_DEFBUTTON4|MB_ICONEXCLAMATION|MB_ICONINFORMATION|MB_ICONQUESTION|MB_ICONSTOP|MB_OK|MB_OKCANCEL|MB_RETRYCANCEL|MB_RIGHT|MB_RTLREADING|MB_SETFOREGROUND|MB_TOPMOST|MB_USERICON|MB_YESNO|MB_YESNOCANCEL|IDABORT|IDCANCEL|IDIGNORE|IDNO|IDOK|IDRETRY|IDYES|SHCTX)\b</string>
+			<key>name</key>
+			<string>support.constant.nsis</string>
+		</dict>
+		<dict>
+			<key>match</key>
+			<string>\b(true|on)\b</string>
+			<key>name</key>
+			<string>constant.language.boolean.true.nsis</string>
+		</dict>
+		<dict>
+			<key>match</key>
+			<string>\b(false|off)\b</string>
+			<key>name</key>
+			<string>constant.language.boolean.false.nsis</string>
+		</dict>
+		<dict>
+			<key>match</key>
+			<string>\b((0(x|X)[0-9a-fA-F]+)|([0-9]+(\.[0-9]+)?))\b</string>
+			<key>name</key>
+			<string>constant.numeric.nsis</string>
+		</dict>
+		<dict>
+			<key>match</key>
+			<string>\${[\w]+}</string>
+			<key>name</key>
+			<string>entity.name.function.nsis</string>
+		</dict>
+		<dict>
+			<key>match</key>
+			<string>\$[\w]+</string>
+			<key>name</key>
+			<string>storage.type.function.nsis</string>
 		</dict>
 		<dict>
 			<key>begin</key>
@@ -58,6 +106,39 @@
 			</dict>
 			<key>name</key>
 			<string>string.quoted.double.nsis</string>
+			<key>patterns</key>
+			<array>
+				<dict>
+					<key>match</key>
+					<string>\$\\.</string>
+					<key>name</key>
+					<string>constant.character.escape.nsis</string>
+				</dict>
+			</array>
+		</dict>
+		<dict>
+			<key>begin</key>
+			<string>'</string>
+			<key>beginCaptures</key>
+			<dict>
+				<key>0</key>
+				<dict>
+					<key>name</key>
+					<string>punctuation.definition.string.begin.nsis</string>
+				</dict>
+			</dict>
+			<key>end</key>
+			<string>'</string>
+			<key>endCaptures</key>
+			<dict>
+				<key>0</key>
+				<dict>
+					<key>name</key>
+					<string>punctuation.definition.string.end.nsis</string>
+				</dict>
+			</dict>
+			<key>name</key>
+			<string>string.quoted.single.nsis</string>
 			<key>patterns</key>
 			<array>
 				<dict>
@@ -111,8 +192,10 @@
 			<string>(\!include|\!insertmacro)\b</string>
 		</dict>
 	</array>
+	
 	<key>scopeName</key>
 	<string>source.nsis</string>
+
 	<key>uuid</key>
 	<string>B6872F8A-D31D-11E0-9572-0800200C9A66</string>
 </dict>
