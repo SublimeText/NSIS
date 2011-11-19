@@ -14,7 +14,7 @@
 	</array>
 
 	<key>name</key>
-	<string>NSIS Installer</string>
+	<string>NSIS</string>
 	<key>patterns</key>
 	<array>
 		<dict>
