@@ -4,8 +4,8 @@ NSIS (Nullsoft Scriptable Install System) is an open source program/language to 
 
 ## Screenshots
 
-![Expresso Soda](http://github.com/jsadeli/NSIS/raw/master/screenshots/expresso-soda.png)
-![Monokai Soda](http://github.com/jsadeli/NSIS/raw/master/screenshots/monokai-soda.png)
+![Expresso Soda](http://github.com/SublimeText/NSIS/raw/master/screenshots/expresso-soda.png)
+![Monokai Soda](http://github.com/SublimeText/NSIS/raw/master/screenshots/monokai-soda.png)
 
 ## Installation
 
@@ -15,7 +15,7 @@ If you are a git user, the best way to install this bundle and keep up to date i
 
 Go to your Sublime Text 2 `Packages` directory and clone the repository using the command below:
 
-    git clone https://github.com/jsadeli/NSIS "NSIS"
+    git clone https://github.com/SublimeText/NSIS "NSIS"
 
 ### Download Manually
 
