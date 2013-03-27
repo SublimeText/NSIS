@@ -1,7 +1,7 @@
 {
   "cmd": ["makensis", "$file"],
   "working_dir": "${project_path:${folder}}",
-  "file_regex": "Error in script \"(...*?)\" on line ([0-9]*)",
+  "file_regex": ".*rror in script:? \"(...*?)\" on line ([0-9]*)",
   "selector" : "source.nsis",
   
   "windows":
