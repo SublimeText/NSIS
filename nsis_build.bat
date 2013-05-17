@@ -8,14 +8,20 @@ if defined NSIS_HOME (
     )
 )
 
-if %PROCESSOR_ARCHITECTURE%==x86 (
-    Set RegQry=HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\NSIS
+if %1==u (
+	set nsis_build=NSIS Unicode
 ) else (
-    Set RegQry=HKLM\SOFTWARE\Wow6432Node\Microsoft\Windows\CurrentVersion\Uninstall\NSIS
+	set nsis_build=NSIS
+)
+
+if %PROCESSOR_ARCHITECTURE%==x86 (
+    set RegQry=HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\%nsis_build%
+) else (
+    set RegQry=HKLM\SOFTWARE\Wow6432Node\Microsoft\Windows\CurrentVersion\Uninstall\%nsis_build%
 )
 
 if not defined nsis_compiler (
-    for /F "tokens=2*" %%a in ('reg query %RegQry% /v InstallLocation ^|findstr InstallLocation') do set nsis_compiler=%%b
+    for /F "tokens=2*" %%a in ('reg query "%RegQry%" /v InstallLocation ^|findstr InstallLocation') do set nsis_compiler=%%b
 )
 
 if not defined nsis_compiler (
@@ -23,7 +29,7 @@ if not defined nsis_compiler (
 )
 
 if defined nsis_compiler (
-    "%nsis_compiler%\makensis.exe" %1
+    "%nsis_compiler%\makensis.exe" %2
 ) else (
     echo "Error, build system cannot find NSIS! Please reinstall it, add makensis.exe to your PATH, or defined the NSIS_HOME environment variable."
 )
