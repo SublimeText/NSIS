@@ -43,7 +43,7 @@
 		</dict>
 		<dict>
 			<key>match</key>
-			<string>(\b|^\s*)(?i)(Function|FunctionEnd|Section|SectionEnd|SectionGroup|SectionGroupEnd|SubSection|SubSectionEnd|PageEx|PageExEnd|Page|UninstPage)\b</string>
+			<string>(\b|^\s*)(?i)(Function|FunctionEnd|Section|SectionEnd|SectionGroup|SectionGroupEnd|SubSection|SubSectionEnd|PageEx|PageExEnd)\b</string>
 			<key>name</key>
 			<string>support.function.nsis</string>
 		</dict>
