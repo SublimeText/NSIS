@@ -28,8 +28,14 @@ if not defined nsis_compiler (
     for %%X in (makensis.exe) do (set nsis_compiler=%%~dp$PATH:X)
 )
 
+set args=
+:loop
+    set args=%args% %2
+    shift
+if not "%~2"=="" goto loop
+
 if defined nsis_compiler (
-    "%nsis_compiler%\makensis.exe" %2
+    "%nsis_compiler%\makensis.exe" %args%
 ) else (
     echo "Error, build system cannot find NSIS! Please reinstall it, add makensis.exe to your PATH, or defined the NSIS_HOME environment variable."
 )
