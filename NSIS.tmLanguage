@@ -37,6 +37,12 @@
 		</dict>
 		<dict>
 			<key>match</key>
+			<string>(\b|^\s*)(?i)\w+\:\:\w+</string>
+			<key>name</key>
+			<string>keyword.plugin.nsis</string>
+		</dict>
+		<dict>
+			<key>match</key>
 			<string>[!&lt;&gt;]?=|&lt;&gt;|&lt;|&gt;</string>
 			<key>name</key>
 			<string>keyword.operator.comparison.nsis</string>
