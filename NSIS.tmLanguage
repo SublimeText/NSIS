@@ -19,7 +19,7 @@
 	<array>
 		<dict>
 			<key>match</key>
-			<string>(\b|^\s*)(?i)(\!include|\!addincludedir|\!addplugindir|\!appendfile|\!cd|\!delfile|\!echo|\!error|\!execute|\!packhdr|\!finalize|\!getdllversion|\!system|\!tempfile|\!warning|\!verbose|\!define|\!undef|\!insertmacro|\!macro|\!macroend|\!searchparse|\!searchreplace)\b</string>
+			<string>(\b|^\s*)(?i)(\!include|\!addincludedir|\!addplugindir|\!appendfile|\!cd|\!delfile|\!echo|\!error|\!execute|\!packhdr|\!finalize|\!getdllversion|\!system|\!tempfile|\!warning|\!verbose|\!define|\!undef|\!insertmacro|\!macro|\!macroend|\!makensis[\!searchparse|\!searchreplace)\b</string>
 			<key>name</key>
 			<string>keyword.compiler.nsis</string>
 		</dict>
