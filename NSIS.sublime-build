@@ -7,5 +7,13 @@
   "windows":
     {
       "cmd": ["$packages\\NSIS\\nsis_build.bat", "$file"]
+    },
+  "linux":
+    {
+      "cmd": ["$packages/NSIS/nsis_build.sh", "$file"]
+    },
+  "osx":
+    {
+      "cmd": ["$packages/NSIS/nsis_build.sh", "$file"]
     }
 }
