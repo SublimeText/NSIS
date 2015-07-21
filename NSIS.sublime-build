@@ -1,4 +1,5 @@
 {
+  "cmd": ["$packages/NSIS/nsis_build.sh", "$file"],
   "working_dir": "${project_path:${folder}}",
   "file_regex": ".*rror in script:? \"(...*?)\" on line ([0-9]*)",
   "selector" : "source.nsis",
@@ -6,13 +7,5 @@
   "windows":
     {
       "cmd": ["$packages\\NSIS\\nsis_build.bat", "$file"]
-    },
-  "linux":
-    {
-      "cmd": ["$packages/NSIS/nsis_build.sh", "$file"]
-    },
-  "osx":
-    {
-      "cmd": ["$packages/NSIS/nsis_build.sh", "$file"]
     }
 }
