@@ -15,6 +15,9 @@
 #
 # https://github.com/idleberg/sublime-makensis
 
+# Set path
+PATH=/usr/bin:/usr/local/bin:/opt/local/bin:/bin:$PATH
+
 # Check for arguments
 if [[ $@ == '' ]]; then
     echo "Error: No arguments passed"
@@ -22,43 +25,14 @@ if [[ $@ == '' ]]; then
 fi
 
 ### Native makensis
+makensis "$@"
 
-# Set NSIS locations
-NSIS=(
-    "/usr/bin/makensis"
-    "/usr/local/bin/makensis"
-    "/opt/local/bin/makensis"
-    "/bin/makensis"
-    )
-
-# Count items in $NSIS
-items=${#NSIS[@]}
-
-# Set counter
-count=0
-
-# Iterate over $NSIS
-for i in ${NSIS[*]}; do
-
-    # Increment counter
-    count=$((count+1))
-
-    # Run makensis if found
-    if [[ -e $i ]]; then
-        eval $i $@
-        break
-    fi
-done
-
-# Display error
-if [[ $count == $items ]]; then
-    echo "Error: makensis not found"
-else
-    exit 0
+if [ $? -eq 0 ]
+then
+  exit 0
 fi
 
 ### Wine fallback (via https://gist.github.com/derekstavis/8288379)
-
 echo
 echo "Trying to use Wine fallback"
 
@@ -69,28 +43,12 @@ command -v wine >/dev/null 2>&1 || {
 }
 
 # Get Program Files path via Wine command prompt
-PROGRAMFILES=$(wine cmd /c 'echo %PROGRAMFILES%' 2>/dev/null)
+PROGRAMS_WIN=$(wine cmd /c 'echo %PROGRAMFILES%' 2>/dev/null)
 
 # Translate windows path to absolute unix path
-PATH=$(winepath -u "${PROGRAMFILES}" 2>/dev/null)
+PROGRAMS_UNIX=$(winepath -u "${PROGRAMS_WIN}" 2>/dev/null)
 
 # Get makensis path
-MAKENSIS=$(printf %q "${PATH%?}/NSIS/makensis.exe")
+MAKENSIS=$(printf %q "${PROGRAMS_UNIX%?}/NSIS/makensis.exe")
 
-# Set WINE locations
-WINE=(
-    "/usr/bin/wine"
-    "/usr/local/bin/wine"
-    "/opt/local/bin/wine"
-    "/bin/wine"
-    )
-
-# Iterate over $WINE
-for i in ${WINE[*]}; do
-
-    # Run makensis if found
-    if [[ -e $i ]]; then
-        eval $i $MAKENSIS -- $@
-        break
-    fi
-done
+eval wine $MAKENSIS -- $@
