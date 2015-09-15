@@ -8,16 +8,10 @@ if defined NSIS_HOME (
     )
 )
 
-if %1==u (
-	set nsis_build=NSIS Unicode
-) else (
-	set nsis_build=NSIS
-)
-
 if %PROCESSOR_ARCHITECTURE%==x86 (
-    set RegQry=HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\%nsis_build%
+    set RegQry=HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\NSIS
 ) else (
-    set RegQry=HKLM\SOFTWARE\Wow6432Node\Microsoft\Windows\CurrentVersion\Uninstall\%nsis_build%
+    set RegQry=HKLM\SOFTWARE\Wow6432Node\Microsoft\Windows\CurrentVersion\Uninstall\NSIS
 )
 
 if not defined nsis_compiler (
@@ -30,9 +24,9 @@ if not defined nsis_compiler (
 
 set args=
 :loop
-    set args=%args% %2
+    set args=%args% %1
     shift
-if not "%~2"=="" goto loop
+if not "%~1"=="" goto loop
 
 if defined nsis_compiler (
     "%nsis_compiler%\makensis.exe" %args%
