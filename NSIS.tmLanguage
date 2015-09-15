@@ -55,12 +55,6 @@
 		</dict>
 		<dict>
 			<key>match</key>
-			<string>\s(\+|\-|\∗|\/|\%|\||&amp;|\^|\>\>|\<\<|\~|\!|\|\||&amp;&amp;)\s</string>
-			<key>name</key>
-			<string>keyword.operator.comparison.nsis</string>
-		</dict>
-		<dict>
-			<key>match</key>
 			<string>(\b|^\s*)(?i)(Function|FunctionEnd|Section|SectionEnd|SectionGroup|SectionGroupEnd|SubSection|SubSectionEnd|PageEx|PageExEnd)\b</string>
 			<key>name</key>
 			<string>support.function.nsis</string>
