@@ -43,7 +43,19 @@
 		</dict>
 		<dict>
 			<key>match</key>
+			<string>\s(\+|\-|\∗|\/|\%|\||&amp;|\^|&gt;&gt;|&lt;&lt;|\~|\!|\|\||&amp;&amp;)\s</string>
+			<key>name</key>
+			<string>keyword.operator.nsis</string>
+		</dict>
+		<dict>
+			<key>match</key>
 			<string>[!&lt;&gt;]?=|&lt;&gt;|&lt;|&gt;</string>
+			<key>name</key>
+			<string>keyword.operator.comparison.nsis</string>
+		</dict>
+		<dict>
+			<key>match</key>
+			<string>\s(\+|\-|\∗|\/|\%|\||&amp;|\^|\>\>|\<\<|\~|\!|\|\||&amp;&amp;)\s</string>
 			<key>name</key>
 			<string>keyword.operator.comparison.nsis</string>
 		</dict>
