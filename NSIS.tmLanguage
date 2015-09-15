@@ -73,6 +73,12 @@
 		</dict>
 		<dict>
 			<key>match</key>
+			<string>(\b|^\s*)(?i)((un\.)?components|(un\.)?custom|(un\.)?directory|(un\.)?instfiles|(un\.)?license|(un\.)?uninstConfirm|admin|all|auto|both|bottom|bzip2|current|force|hide|highest|ifdiff|ifnewer|lastused|leave|left|listonly|lzma|nevershow|none|normal|notset|right|show|silent|silentlog|textonly|top|try|user|Win10|Win7|Win8|WinVista|zlib)\b</string>
+			<key>name</key>
+			<string>constant.language.option.nsis</string>
+		</dict>
+		<dict>
+			<key>match</key>
 			<string>\b((0(x|X)[0-9a-fA-F]+)|([0-9]+(\.[0-9]+)?))\b</string>
 			<key>name</key>
 			<string>constant.numeric.nsis</string>
