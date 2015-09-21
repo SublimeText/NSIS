@@ -6,7 +6,7 @@ NSIS (Nullsoft Scriptable Install System) is an open source program and scriptin
 ## Screenshots
 
 ![Expresso Soda](https://raw.githubusercontent.com/SublimeText/NSIS/master/screenshots/expresso-soda.png)
-![Monokai Soda](https://raw.githubusercontent.com/SublimeText/NSIS/master/screenshots/screenshots/monokai-soda.png)
+![Monokai Soda](https://raw.githubusercontent.com/SublimeText/NSIS/master/screenshots/monokai-soda.png)
 
 ## Installation
 
