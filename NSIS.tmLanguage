@@ -19,7 +19,7 @@
 	<array>
 		<dict>
 			<key>match</key>
-			<string>(\b|^\s*)(?i)(\!include|\!addincludedir|\!addplugindir|\!appendfile|\!cd|\!delfile|\!echo|\!error|\!execute|\!packhdr|\!finalize|\!getdllversion|\!system|\!tempfile|\!warning|\!verbose|\!define|\!undef|\!insertmacro|\!macro|\!macroend|\!makensis|\!searchparse|\!searchreplace)\b</string>
+			<string>(\b|^\s*)(?i)\!(include|addincludedir|addplugindir|appendfile|cd|delfile|echo|error|execute|packhdr|finalize|getdllversion|system|tempfile|warning|verbose|define|undef|insertmacro|macro|macroend|makensis|searchparse|searchreplace)\b</string>
 			<key>name</key>
 			<string>keyword.compiler.nsis</string>
 		</dict>
@@ -31,7 +31,7 @@
 		</dict>
 		<dict>
 			<key>match</key>
-			<string>(\b|^\s*)(?i)(\!ifdef|\!ifndef|\!if|\!ifmacrodef|\!ifmacrondef|\!else|\!endif)\b</string>
+			<string>(\b|^\s*)(?i)\!(ifdef|ifndef|if|ifmacrodef|ifmacrondef|else|endif)\b</string>
 			<key>name</key>
 			<string>keyword.control.nsis</string>
 		</dict>
@@ -73,7 +73,7 @@
 		</dict>
 		<dict>
 			<key>match</key>
-			<string>(\b|^\s*)(?i)((un\.)?components|(un\.)?custom|(un\.)?directory|(un\.)?instfiles|(un\.)?license|(un\.)?uninstConfirm|admin|all|auto|both|bottom|bzip2|current|force|hide|highest|ifdiff|ifnewer|lastused|leave|left|listonly|lzma|nevershow|none|normal|notset|right|show|silent|silentlog|textonly|top|try|user|Win10|Win7|Win8|WinVista|zlib)\b</string>
+			<string>(\b|^\s*)(?i)((un\.)?components|(un\.)?custom|(un\.)?directory|(un\.)?instfiles|(un\.)?license|uninstConfirm|admin|all|auto|both|bottom|bzip2|current|force|hide|highest|ifdiff|ifnewer|lastused|leave|left|listonly|lzma|nevershow|none|normal|notset|right|show|silent|silentlog|textonly|top|try|user|Win10|Win7|Win8|WinVista|zlib)\b</string>
 			<key>name</key>
 			<string>constant.language.option.nsis</string>
 		</dict>
