@@ -6,6 +6,6 @@
   
   "windows":
     {
-      "cmd": ["$packages\\NSIS\\nsis_build.bat", "$file"]
+      "cmd": ["$packages\\NSIS\\nsis_build.cmd", "$file"]
     }
 }
