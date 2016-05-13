@@ -11,7 +11,7 @@ NSIS (Nullsoft Scriptable Install System) is an open source program and scriptin
 
 ## Installation
 
-Easiest way to install the plugin is to use [Package Control](http://wbond.net/sublime_packages/package_control).
+Easiest way to install the plugin is to use [Package Control](https://packagecontrol.io).
 
 Alternatively you can git clone directly into `Packages` directory in the Sublime Text 3 application settings area.
 
