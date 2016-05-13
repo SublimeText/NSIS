@@ -2,7 +2,7 @@
 
 NSIS (Nullsoft Scriptable Install System) is an open source program and scripting language to create Windows installers. This plugin aids in the creation of such scripts/installers.
 
-This package is compatible with Sublime Text 3 (Build 3103 or higher). Click [here](https://github.com/SublimeText/NSIS/tree/st2-master) for the Sublime Text 2 version of this package.
+**Note**: This package is compatible with Sublime Text 3 ([Build 3103](http://www.sublimetext.com/blog/articles/sublime-text-3-build-3103) or higher). Click [here](https://github.com/SublimeText/NSIS/tree/st2-master) for a Sublime Text 2 version of this package.
 
 ## Screenshots
 
