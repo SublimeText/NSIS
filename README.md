@@ -6,8 +6,8 @@ NSIS (Nullsoft Scriptable Install System) is an open source program and scriptin
 
 ## Screenshots
 
-![Tomorrow Theme](screenshots/light-theme.png)
-![Brogrammer Theme](screenshots/dark-theme.png)
+![Tomorrow Theme](https://raw.githubusercontent.com/SublimeText/NSIS/master/screenshots/light-theme.png)
+![Brogrammer Theme](https://raw.githubusercontent.com/SublimeText/NSIS/master/screenshots/dark-theme.png)
 
 ## Installation
 
