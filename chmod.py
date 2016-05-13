@@ -1,13 +1,25 @@
+# https://gist.github.com/idleberg/03bc3766c760bb4b81e3
+
 import os, stat, sublime, sublime_plugin
 
+# Array of files, relative to package directory
+files = [
+    'nsis_build.sh'
+]
+
 def plugin_loaded():
-    from os.path import join
     from package_control import events
+    
+    # Get name of package folder
+    me = os.path.basename(os.path.dirname(os.path.realpath(__file__)))
 
-    package = "NSIS"
-    script  = join(sublime.packages_path(), package + "/nsis_build.sh")
+    if (events.install(me) or events.post_upgrade(me)) and os.name is 'posix' or 'mac':
+        for file in files:
 
-    # chmod +x <script>
-    if (events.install(package) or events.post_upgrade(package)) and os.name is 'posix' or 'mac':
-        st = os.stat(script)
-        os.chmod(script, st.st_mode | stat.S_IEXEC)
+            # Concat full path
+            file_path = sublime.packages_path() + '/' + me + '/' + file
+
+            # Change permissions, if file exists
+            if os.path.isfile(file_path):
+                st = os.stat(file_path)
+                os.chmod(file_path, st.st_mode | stat.S_IEXEC)
