@@ -85,4 +85,4 @@ contexts:
           pop: true
     - match: (\!include|\!insertmacro)\b
       captures:
-        match: keyword.control.import.nsis
+        0: keyword.control.import.nsis
