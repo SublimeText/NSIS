@@ -15,7 +15,7 @@ contexts:
       scope: keyword.command.nsis
     - match: ^\s*\!(ifdef|ifndef|if|ifmacrodef|ifmacrondef|else|endif)\b
       scope: keyword.control.nsis
-    - match: (\b|^\s*)(?i)\w+\:\:\w+
+    - match: ^\s*(?i)\w+\:\:\w+
       scope: keyword.plugin.nsis
     - match: "[!<>]?=|<>|<|>"
       scope: keyword.operator.comparison.nsis
