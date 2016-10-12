@@ -9,7 +9,7 @@ file_extensions:
 scope: source.nsis
 contexts:
   main:
-    - match: ^\s*(SubSection(End)?)\b
+    - match: ^\s*(CompareDLLVersions|CompareFileTimes|DirShow|DisabledBitmap|EnabledBitmap|GetFullDLLPath|GetParent|SectionDivider|SetPluginsUnload|SubSection(End)?)\b
       scope: invalid.deprecated.nsis
     - match: ^\s*\!(include|addincludedir|addplugindir|appendfile|cd|delfile|echo|error|execute|packhdr|finalize|getdllversion|system|tempfile|warning|verbose|define|undef|insertmacro|macro|macroend|makensis|searchparse|searchreplace)\b
       scope: keyword.compiler.nsis
