@@ -19,7 +19,7 @@
 	<array>
 		<dict>
 			<key>match</key>
-			<string>^\s*(SubSection(End)?)\b</string>
+			<string>^\s*(CompareDLLVersions|CompareFileTimes|DirShow|DisabledBitmap|EnabledBitmap|GetFullDLLPath|GetParent|SectionDivider|SetPluginsUnload|SubSection(End)?)\b</string>
 			<key>name</key>
 			<string>invalid.deprecated.nsis</string>
 		</dict>
