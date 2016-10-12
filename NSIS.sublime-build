@@ -13,6 +13,7 @@
       "name": "strict",
       "cmd": ["sh", "$packages/makensis/scripts/build.sh", "-WX", "$file"],
       "file_regex": ".*arning: .* \\((...*?):(\\d+)\\)",
+
       "windows": {
         "cmd": ["$packages\\NSIS\\nsis_build", "/WX", "$file"]
       }
