@@ -97,13 +97,13 @@
 		</dict>
 		<dict>
 			<key>match</key>
-			<string>\$\([\w\.:-]+\)</string>
+			<string>\$\([\w\.:\^-]+\)</string>
 			<key>name</key>
 			<string>entity.name.language.nsis</string>
 		</dict>
 		<dict>
 			<key>match</key>
-			<string>\${[\w\.:-]+}</string>
+			<string>\${[\w\.:\^-]+}</string>
 			<key>name</key>
 			<string>entity.name.function.nsis</string>
 		</dict>
