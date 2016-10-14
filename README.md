@@ -19,7 +19,7 @@ Alternatively you can git clone directly into `Packages` directory in the Sublim
 
 Go to your Sublime Text 3 `Packages` directory and clone the repository using the command below:
 
-    git clone https://github.com/SublimeText/NSIS "NSIS"
+    git clone https://github.com/SublimeText/NSIS
 
 ### Download Manually
 
