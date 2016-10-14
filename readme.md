@@ -18,7 +18,7 @@ Alternatively you can git clone directly into `Packages` directory in the Sublim
 
 Go to your Sublime Text 2 `Packages` directory and clone the repository using the command below:
 
-    git clone --branch st2-master https://github.com/SublimeText/NSIS "NSIS"
+    git clone --branch st2-master https://github.com/SublimeText/NSIS
 
 ### Download Manually
 
