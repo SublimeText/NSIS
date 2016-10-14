@@ -8,7 +8,8 @@ file_extensions:
   - nsh
 scope: source.nsis
 variables:
-  variable: '\$\w+'
+  uservar: '\$\w+'
+  variable: '\$(\{__DATE__\}|\{__FILE__\}|\{__FILEDIR__\}|\{__LINE__\}|\{__TIME__\}|\{__TIMESTAMP__\}|ADMINTOOLS|APPDATA|CDBURN_AREA|CMDLINE|COMMONFILES|COOKIES|DESKTOP|DOCUMENTS|EXEDIR|EXEFILE|EXEPATH|FAVORITES|FONTS|HISTORY|HWNDPARENT|INSTDIR|INTERNET_CACHE|LANGUAGE|LOCALAPPDATA|MUSIC|NETHOOD|NSIS_MAX_STRLEN|NSIS_VERSION|NSISDIR|OUTDIR|PICTURES|PLUGINSDIR|PRINTHOOD|PROFILE|PROGRAMFILES|QUICKLAUNCH|RECENT|RESOURCES_LOCALIZED|RESOURCES|SENDTO|SMPROGRAMS|SMSTARTUP|STARTMENU|SYSDIR|TEMP|TEMPLATES|VIDEOS|WINDIR)'
   language: '\$\([\w\.:\^-]+\)'
   definitions: '\$\{[\w\.:\^-]+\}'
 contexts:
@@ -39,12 +40,14 @@ contexts:
       scope: constant.language.slash-option.nsis
     - match: '\b((0(x|X)[0-9a-fA-F]+)|([0-9]+(\.[0-9]+)?))\b'
       scope: constant.numeric.nsis
-    - match: '{{variable}}'
-      scope: variable.nsis
     - match: '{{language}}'
-      scope: variable.language.nsis
+      scope: constant.other.nsis
     - match: '{{definitions}}'
-      scope: constant.nsis
+      scope: constant.other.nsis
+    - match: '{{variable}}'
+      scope: variable.language.nsis
+    - match: '{{uservar}}'
+      scope: variable.other.nsis
     - match: '"'
       captures:
         0: punctuation.definition.string.begin.nsis
@@ -57,11 +60,13 @@ contexts:
         - match: \$\\.
           scope: constant.character.escape.nsis
         - match: '{{variable}}'
-          scope: variable.nsis
-        - match: '{{language}}'
           scope: variable.language.nsis
+        - match: '{{uservar}}'
+          scope: variable.other.nsis
+        - match: '{{language}}'
+          scope: variable.other.nsis
         - match: '{{definitions}}'
-          scope: constant.nsis
+          scope: constant.other.nsis
     - match: "'"
       captures:
         0: punctuation.definition.string.begin.nsis
@@ -74,11 +79,13 @@ contexts:
         - match: \$\\.
           scope: constant.character.escape.nsis
         - match: '{{variable}}'
-          scope: variable.nsis
-        - match: '{{language}}'
           scope: variable.language.nsis
+        - match: '{{uservar}}'
+          scope: variable.other.nsis
+        - match: '{{language}}'
+          scope: constant.other.nsis
         - match: '{{definitions}}'
-          scope: constant.nsis
+          scope: constant.other.nsis
     - match: "`"
       captures:
         0: punctuation.definition.string.begin.nsis
@@ -91,11 +98,13 @@ contexts:
         - match: \$\\.
           scope: constant.character.escape.nsis
         - match: '{{variable}}'
-          scope: variable.nsis
-        - match: '{{language}}'
           scope: variable.language.nsis
+        - match: '{{uservar}}'
+          scope: variable.other.nsis
+        - match: '{{language}}'
+          scope: constant.other.nsis
         - match: '{{definitions}}'
-          scope: constant.nsis
+          scope: constant.other.nsis
     - match: (;|#).*$\n?
       scope: comment.line.nsis
       captures:
