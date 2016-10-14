@@ -1,12 +1,12 @@
 # NSIS Bundle for Sublime Text 2
 
-NSIS (Nullsoft Scriptable Install System) is an open source program and scripting language to create Windows installers. This plugin aids in the creation of such scripts/installers.
+NSIS (Nullsoft Scriptable Install System) is an open source program and scripting language to create Windows installers. This package provides syntax highlighting and build tools.
 
 
 ## Screenshots
 
-![Expresso Soda](https://raw.githubusercontent.com/SublimeText/NSIS/st2-master/screenshots/expresso-soda.png)
-![Monokai Soda](https://raw.githubusercontent.com/SublimeText/NSIS/st2-master/screenshots/monokai-soda.png)
+![Light Theme](https://raw.githubusercontent.com/SublimeText/NSIS/st2-master/screenshots/light-theme.png)
+![Dark Theme](https://raw.githubusercontent.com/SublimeText/NSIS/st2-master/screenshots/dark-theme.png)
 
 ## Installation
 
