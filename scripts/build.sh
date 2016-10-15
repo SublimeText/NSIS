@@ -18,16 +18,17 @@
 # Set path
 PATH=/usr/bin:/usr/local/bin:/opt/local/bin:/bin:$PATH
 
-# Check for arguments
-if [[ $@ == '' ]]
-then
-    echo "Error: No arguments passed"
-    exit 1
-fi
-
 # Native makensis
 if makensis -VERSION >/dev/null 
 then
+
+    # Check for arguments
+    if [[ $@ == '' ]]
+    then
+        echo "Error: No arguments passed"
+        exit 1
+    fi
+
     makensis "$@"
 
     if [ $? -eq 0 ]
@@ -55,5 +56,15 @@ else
     # Get makensis path
     MAKENSIS=$(printf %q "${PROGRAMS_UNIX%?}/NSIS/makensis.exe")
 
-    eval wine $MAKENSIS -- $@
+    # Set arguments
+    if [[ $1 != '-WX' ]]
+    then
+        ARGUMENTS="--"
+        SCRIPT=$@
+    else
+        ARGUMENTS="$1 --"
+        SCRIPT=$2
+    fi
+
+    eval wine $MAKENSIS $ARGUMENTS "$SCRIPT"
 fi
