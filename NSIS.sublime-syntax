@@ -65,10 +65,10 @@ contexts:
       scope: constant.other.nsis
     - match: '{{definitions}}'
       scope: constant.other.nsis
-    - match: '{{variable}}'
-      scope: variable.language.nsis
     - match: '{{uservar}}'
       scope: variable.other.nsis
+    - match: '{{variable}}'
+      scope: variable.language.nsis
     - match: '"'
       captures:
         0: punctuation.definition.string.begin.nsis
@@ -80,10 +80,10 @@ contexts:
           pop: true
         - match: \$\\.
           scope: constant.character.escape.nsis
-        - match: '{{variable}}'
-          scope: variable.language.nsis
         - match: '{{uservar}}'
           scope: variable.other.nsis
+        - match: '{{variable}}'
+          scope: variable.language.nsis
         - match: '{{language}}'
           scope: variable.other.nsis
         - match: '{{definitions}}'
@@ -99,10 +99,10 @@ contexts:
           pop: true
         - match: \$\\.
           scope: constant.character.escape.nsis
-        - match: '{{variable}}'
-          scope: variable.language.nsis
         - match: '{{uservar}}'
           scope: variable.other.nsis
+        - match: '{{variable}}'
+          scope: variable.language.nsis
         - match: '{{language}}'
           scope: constant.other.nsis
         - match: '{{definitions}}'
@@ -118,10 +118,10 @@ contexts:
           pop: true
         - match: \$\\.
           scope: constant.character.escape.nsis
-        - match: '{{variable}}'
-          scope: variable.language.nsis
         - match: '{{uservar}}'
           scope: variable.other.nsis
+        - match: '{{variable}}'
+          scope: variable.language.nsis
         - match: '{{language}}'
           scope: constant.other.nsis
         - match: '{{definitions}}'
