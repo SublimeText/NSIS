@@ -3,7 +3,7 @@
 # sublime-makensis
 #
 # The MIT License (MIT)
-# Copyright (c) 2015 Jan T. Sott, Derek Willian Stavis
+# Copyright (c) 2015, 2ß16 Jan T. Sott, Derek Willian Stavis
 #
 # This script builds NSIS scripts on non-Windows platforms (Mac OS X, Linux)
 # using native makensis or through Wine
@@ -60,11 +60,11 @@ else
     if [[ $1 != '-WX' ]]
     then
         ARGUMENTS="--"
-        SCRIPT=$@
+        SCRIPT=\"$@\"
     else
         ARGUMENTS="$1 --"
-        SCRIPT=$2
+        SCRIPT=\"${@:2}\"
     fi
 
-    eval wine $MAKENSIS $ARGUMENTS "$SCRIPT"
+    eval wine $MAKENSIS $ARGUMENTS $SCRIPT
 fi
