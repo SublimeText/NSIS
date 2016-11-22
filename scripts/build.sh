@@ -60,11 +60,11 @@ else
     if [[ $1 != '-WX' ]]
     then
         ARGUMENTS="--"
-        SCRIPT=$@
+        SCRIPT=\"$@\"
     else
         ARGUMENTS="$1 --"
-        SCRIPT=$2
+        SCRIPT=\"${@:2}\"
     fi
 
-    eval wine $MAKENSIS $ARGUMENTS "$SCRIPT"
+    eval wine $MAKENSIS $ARGUMENTS $SCRIPT
 fi
