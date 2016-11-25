@@ -29,4 +29,4 @@ Go to your Sublime Text 3 `Packages` directory and clone the repository using th
 
 ## Portable NSIS support
 
-Support for portable NSIS can be achieved by putting the main NSIS program directory path in the `PATH` [environment variable](http://superuser.com/questions/284342/what-are-path-and-other-environment-variables-and-how-can-i-set-or-use-them/284351#284351).
+Support for portable NSIS can be achieved by putting the main NSIS program directory path in your `PATH` [environment variable](http://superuser.com/questions/284342/what-are-path-and-other-environment-variables-and-how-can-i-set-or-use-them/284351#284351).
