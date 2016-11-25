@@ -8,9 +8,7 @@ if %PROCESSOR_ARCHITECTURE%==x86 (
     set RegQry=HKLM\SOFTWARE\Wow6432Node\Microsoft\Windows\CurrentVersion\Uninstall\NSIS
 )
 
-if not defined nsis_compiler (
-    for /F "tokens=2*" %%a in ('reg query "%RegQry%" /v InstallLocation ^|findstr InstallLocation') do set nsis_compiler=%%b
-)
+for /F "tokens=2*" %%a in ('reg query "%RegQry%" /v InstallLocation ^|findstr InstallLocation') do set nsis_compiler=%%b
 
 if not defined nsis_compiler (
     for %%X in (makensis.exe) do (set nsis_compiler=%%~dp$PATH:X)
