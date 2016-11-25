@@ -2,12 +2,6 @@
 
 set nsis_compiler=
 
-if defined NSIS_HOME (
-    if exist "%NSIS_HOME%\makensis.exe" (
-        set "nsis_compiler=%NSIS_HOME%"
-    )
-)
-
 if %PROCESSOR_ARCHITECTURE%==x86 (
     set RegQry=HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\NSIS
 ) else (
@@ -31,5 +25,5 @@ if not "%~1"=="" goto loop
 if defined nsis_compiler (
     "%nsis_compiler%\makensis.exe" %args%
 ) else (
-    echo "Error, build system cannot find NSIS! Please reinstall it, add makensis.exe to your PATH, or defined the NSIS_HOME environment variable."
+    echo "Error, build system cannot find NSIS! Make sure it's installed and makensis.exe is your PATH environment variable."
 )
