@@ -8,6 +8,8 @@ file_extensions:
   - nsh
 scope: source.nsis
 variables:
+  dollar: '\${2}\w*'
+  escaped: '\$\\.'
   uservar: '\$\w+'
   variable: '\$(\{__DATE__\}|\{__FILE__\}|\{__FILEDIR__\}|\{__LINE__\}|\{__TIME__\}|\{__TIMESTAMP__\}|ADMINTOOLS|APPDATA|CDBURN_AREA|CMDLINE|COMMONFILES|COOKIES|DESKTOP|DOCUMENTS|EXEDIR|EXEFILE|EXEPATH|FAVORITES|FONTS|HISTORY|HWNDPARENT|INSTDIR|INTERNET_CACHE|LANGUAGE|LOCALAPPDATA|MUSIC|NETHOOD|NSIS_MAX_STRLEN|NSIS_VERSION|NSISDIR|OUTDIR|PICTURES|PLUGINSDIR|PRINTHOOD|PROFILE|PROGRAMFILES(32|64)?|QUICKLAUNCH|RECENT|RESOURCES_LOCALIZED|RESOURCES|SENDTO|SMPROGRAMS|SMSTARTUP|STARTMENU|SYSDIR|TEMP|TEMPLATES|VIDEOS|WINDIR)'
   language: '\$\([\w\.:\^-]+\)'
@@ -78,7 +80,9 @@ contexts:
           captures:
             0: punctuation.definition.string.end.nsis
           pop: true
-        - match: \$\\.
+        - match: '{{dollar}}'
+          scope: constant.character.escape.nsis
+        - match: '{{escaped}}'
           scope: constant.character.escape.nsis
         - match: '{{uservar}}'
           scope: variable.other.nsis
@@ -97,7 +101,9 @@ contexts:
           captures:
             0: punctuation.definition.string.end.nsis
           pop: true
-        - match: \$\\.
+        - match: '{{dollar}}'
+          scope: constant.character.escape.nsis
+        - match: '{{escaped}}'
           scope: constant.character.escape.nsis
         - match: '{{uservar}}'
           scope: variable.other.nsis
@@ -116,7 +122,9 @@ contexts:
           captures:
             0: punctuation.definition.string.end.nsis
           pop: true
-        - match: \$\\.
+        - match: '{{dollar}}'
+          scope: constant.character.escape.nsis
+        - match: '{{escaped}}'
           scope: constant.character.escape.nsis
         - match: '{{uservar}}'
           scope: variable.other.nsis
