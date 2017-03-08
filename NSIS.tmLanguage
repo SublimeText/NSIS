@@ -382,18 +382,6 @@
             <key>name</key>
             <string>comment.block.nsis</string>
         </dict>
-        <dict>
-            <key>captures</key>
-            <dict>
-                <key>match</key>
-                <dict>
-                    <key>name</key>
-                    <string>keyword.control.import.nsis</string>
-                </dict>
-            </dict>
-            <key>match</key>
-            <string>(?i)(\!include|\!insertmacro)\b</string>
-        </dict>
     </array>
     
     <key>scopeName</key>
