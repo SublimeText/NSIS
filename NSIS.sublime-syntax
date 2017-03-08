@@ -32,9 +32,9 @@ contexts:
       scope: support.class.nsis
     - match: "[!<>]?=|<>|<|>"
       scope: keyword.operator.comparison.nsis
-    - match: \b(true|on)\b
+    - match: \b(?i)(true|on)\b
       scope: constant.language.boolean.true.nsis
-    - match: \b(false|off)\b
+    - match: \b(?i)(false|off)\b
       scope: constant.language.boolean.false.nsis
     - match: \b(?i)((un\.)?components|(un\.)?custom|(un\.)?directory|(un\.)?instfiles|(un\.)?license|uninstConfirm|admin|all|auto|both|bottom|bzip2|current|force|hide|highest|ifdiff|ifnewer|lastused|leave|left|listonly|lzma|nevershow|none|normal|notset|right|show|silent|silentlog|textonly|top|try|user|Win10|Win7|Win8|WinVista|zlib)\b
       scope: entity.other.attribute-name.nsis
@@ -149,6 +149,6 @@ contexts:
           captures:
             0: punctuation.definition.comment.nsis
           pop: true
-    - match: (\!include|\!insertmacro)\b
+    - match: (?i)(\!include|\!insertmacro)\b
       captures:
         0: keyword.control.import.nsis
