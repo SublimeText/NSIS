@@ -149,6 +149,3 @@ contexts:
           captures:
             0: punctuation.definition.comment.nsis
           pop: true
-    - match: (?i)(\!include|\!insertmacro)\b
-      captures:
-        0: keyword.control.import.nsis
