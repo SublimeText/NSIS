@@ -6,8 +6,8 @@ comment: "todo: - highlight functions"
 file_extensions:
   - nsi
   - nsh
-  - bbnsi
-  - bbnsh
+  - bnsi
+  - bnsh
 scope: source.nsis
 variables:
   dollar: '\${2}\w*'
