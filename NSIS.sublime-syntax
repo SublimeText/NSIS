@@ -8,6 +8,7 @@ file_extensions:
   - nsh
   - bnsi
   - bnsh
+  - nsdinc
 scope: source.nsis
 variables:
   dollar: '\${2}\w*'
