@@ -2,13 +2,12 @@
 ---
 # http://www.sublimetext.com/docs/3/syntax.html
 name: NSIS
-comment: "todo: - highlight functions"
 file_extensions:
   - nsi
   - nsh
   - bnsi
   - bnsh
-  - nsdinc
+  - nsdincgit 
 scope: source.nsis
 variables:
   dollar: '\${2}\w*'
