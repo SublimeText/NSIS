@@ -24,7 +24,7 @@ contexts:
       scope: entity.name.section.nsis
     - match: ^\s*(?i)(CompareDLLVersions|CompareFileTimes|DirShow|DisabledBitmap|EnabledBitmap|GetFullDLLPath|GetParent|PackEXEHeader|SectionDivider|SetPluginUnload|SubSection(End)?|UninstallExeName)\b
       scope: invalid.deprecated.nsis
-    - match: ^\s*(?i)\!(include|addincludedir|addplugindir|appendfile|cd|delfile|echo|error|execute|packhdr|pragma|finalize|getdllversion|gettlbversion|system|tempfile|warning|verbose|define|undef|insertmacro|macro|macroend|makensis|searchparse|searchreplace)\b
+    - match: ^\s*(?i)\!(addincludedir|addplugindir|appendfile|cd|define|delfile|echo|error|execute|finalize|getdllversion|gettlbversion|include|insertmacro|macro|macroend|makensis|packhdr|pragma|searchparse|searchreplace|system|tempfile|undef|verbose|warning)\b
       scope: keyword.other.nsis
     - match: ^\s*(?i)\!(ifdef|ifndef|if|ifmacrodef|ifmacrondef|else|endif)\b
       scope: keyword.control.nsis
