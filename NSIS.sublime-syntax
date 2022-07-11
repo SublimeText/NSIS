@@ -7,7 +7,7 @@ file_extensions:
   - nsh
   - bnsi
   - bnsh
-  - nsdincgit 
+  - nsdinc
 scope: source.nsis
 variables:
   dollar: '\${2}\w*'
