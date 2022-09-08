@@ -48,7 +48,7 @@ contexts:
     - match: '(?:^\s*)(?i)\${(BannerTrimPath|DirState|DriveSpace|Get(BaseName|Drives|ExeName|ExePath|FileAttributes|FileExt|FileName|FileVersion|Options|OptionsS|Parameters|Parent|Root|Size|Time)|Locate|RefreshShellIcons)}(?:\s+)'
       scope: constant.language.nsis
     # LogicLib.nsh
-    - match: '(?:^\s*)(?i)\${(And(If(Not)?|Unless)|Break|Case(Else)?|Continue|Default|Do(Until|While)?|Else(If(Not)?|Unless)?|End(If|Select|Switch)|Exit(Do|For|While)|For(Each)?|If(Cmd|Not(Then)?|Then)?|Loop(Until|While)?|Or(If(Not)?|Unless)|Select|Switch|Unless|While)}(?:\s+)'
+    - match: '(?:^\s*)(?i)\${(And(If(Not)?|Unless)|Break|Case(2|3|4|5|Else)?|Continue|Default|Do(Until|While)?|Else(If(Not)?|Unless)?|End(If|Select|Switch)|Exit(Do|For|While)|For(Each)?|If(Cmd|Not(Then)?|Then)?|Loop(Until|While)?|Or(If(Not)?|Unless)|Select|Switch|Unless|While)}(?:\s+)'
       scope: constant.language.nsis
     # Memento.nsh
     - match: '(?:^\s*)(?i)\${(Memento(Section(Done|End|Restore|Save)?|UnselectedSection))}(?:\s+)'
