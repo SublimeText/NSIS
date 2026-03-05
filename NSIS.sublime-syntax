@@ -38,41 +38,41 @@ contexts:
       scope: entity.other.attribute-name.nsis
     - match: \b(?i)(ARCHIVE|FILE_ATTRIBUTE_ARCHIVE|FILE_ATTRIBUTE_HIDDEN|FILE_ATTRIBUTE_NORMAL|FILE_ATTRIBUTE_OFFLINE|FILE_ATTRIBUTE_READONLY|FILE_ATTRIBUTE_SYSTEM|FILE_ATTRIBUTE_TEMPORARY|HIDDEN|HKCC|HKCR(32|64)?|HKCU(32|64)?|HKDD|HKEY_CLASSES_ROOT|HKEY_CURRENT_CONFIG|HKEY_CURRENT_USER|HKEY_DYN_DATA|HKEY_LOCAL_MACHINE|HKEY_PERFORMANCE_DATA|HKEY_USERS|HKLM(32|64)?|HKPD|HKU|IDABORT|IDCANCEL|IDD_DIR|IDD_INST|IDD_INSTFILES|IDD_LICENSE|IDD_SELCOM|IDD_UNINST|IDD_VERIFY|IDIGNORE|IDNO|IDOK|IDRETRY|IDYES|MB_ABORTRETRYIGNORE|MB_DEFBUTTON1|MB_DEFBUTTON2|MB_DEFBUTTON3|MB_DEFBUTTON4|MB_ICONEXCLAMATION|MB_ICONINFORMATION|MB_ICONQUESTION|MB_ICONSTOP|MB_OK|MB_OKCANCEL|MB_RETRYCANCEL|MB_RIGHT|MB_RTLREADING|MB_SETFOREGROUND|MB_TOPMOST|MB_USERICON|MB_YESNO|MB_YESNOCANCEL|NORMAL|OFFLINE|READONLY|SHCTX|SHELL_CONTEXT|SW_HIDE|SW_SHOWDEFAULT|SW_SHOWMAXIMIZED|SW_SHOWMINIMIZED|SW_SHOWNORMAL|SYSTEM|TEMPORARY)\b
       scope: entity.other.attribute-name.nsis
-    - match: \s+\/(?i)(BRANDING|CENTER|COMPONENTSONLYONCUSTOM|CUSTOMSTRING\=|ENABLECANCEL|EXERESOURCE|FILESONLY|FINAL|GLOBAL|IMGID\=|ITALIC|LANG\=|NOCUSTOM|NONFATAL|OVERWRITE|REBOOTOK|REPLACE|RESIZETOFIT|RESIZETOFIT|SHORT|SILENT|SOLID|STRIKE|STRINGID|TRIM|UNDERLINE|a|date|e|file|gray|ifempty|ifndef|ignorecase|noerrors|nonfatal|o|oname\=|r|redef|utcdate|windows|x)\b
+    - match: \s+\/(?i)(BRANDING|CENTER|COMPONENTSONLYONCUSTOM|CUSTOMSTRING\=|ENABLECANCEL|EXERESOURCE|FILESONLY|FINAL|GLOBAL|IMGID\=|ITALIC|LANG\=|NOCUSTOM|NONFATAL|OVERWRITE|REBOOTOK|REPLACE|RESIZETOFIT|SHORT|SILENT|SOLID|STRIKE|STRINGID|TRIM|UNDERLINE|a|date|e|file|gray|ifempty|ifndef|ignorecase|noerrors|nonfatal|o|oname\=|r|redef|utcdate|windows|x)\b
       scope: constant.language.slash-option.nsis
     - match: '\b((0(x|X)[0-9a-fA-F]+)|([0-9]+(\.[0-9]+)?))\b'
       scope: constant.numeric.nsis
     - match: '\\(?=\n)'
       scope: constant.character.escape.line-continuation.nsis
     # FileFunc.nsh
-    - match: '(?:^\s*)(?i)\${(BannerTrimPath|DirState|DriveSpace|Get(BaseName|Drives|ExeName|ExePath|FileAttributes|FileExt|FileName|FileVersion|Options|OptionsS|Parameters|Parent|Root|Size|Time)|Locate|RefreshShellIcons)}(?:\s+)'
+    - match: '(?:^\s*)(?i)\${(BannerTrimPath|DirState|DriveSpace|Get(BaseName|Drives|ExeName|ExePath|FileAttributes|FileExt|FileName|FileVersion|Options|OptionsS|Parameters|Parent|Root|Size|Time)|Locate|RefreshShellIcons)}(?=\s|$)'
       scope: constant.language.nsis
     # LogicLib.nsh
-    - match: '(?:^\s*)(?i)\${(And(If(Not)?|Unless)|Break|Case(2|3|4|5|Else)?|Continue|Default|Do(Until|While)?|Else(If(Not)?|Unless)?|End(If|Select|Switch)|Exit(Do|For|While)|For(Each)?|If(Cmd|Not(Then)?|Then)?|Loop(Until|While)?|Or(If(Not)?|Unless)|Select|Switch|Unless|While)}(?:\s+)'
+    - match: '(?:^\s*)(?i)\${(And(If(Not)?|Unless)|Break|Case(2|3|4|5|Else)?|Continue|Default|Do(Until|While)?|Else(If(Not)?|Unless)?|End(If|Select|Switch)|Exit(Do|For|While)|For(Each)?|If(Cmd|Not(Then)?|Then)?|Loop(Until|While)?|Or(If(Not)?|Unless)|Select|Switch|Unless|While)}(?=\s|$)'
       scope: constant.language.nsis
     # Memento.nsh
-    - match: '(?:^\s*)(?i)\${(Memento(Section(Done|End|Restore|Save)?|UnselectedSection))}(?:\s+)'
+    - match: '(?:^\s*)(?i)\${(Memento(Section(Done|End|Restore|Save)?|UnselectedSection))}(?=\s|$)'
       scope: constant.language.nsis
     # TextFunc.nsh
-    - match: '(?:^\s*)(?i)\${(Config(Read|ReadS|Write|WriteS)|File(Join|ReadFromEnd|Recode)|Line(Find|Read|Sum)|Text(Compare|CompareS)|TrimNewLines)}(?:\s+)'
+    - match: '(?:^\s*)(?i)\${(Config(Read|ReadS|Write|WriteS)|File(Join|ReadFromEnd|Recode)|Line(Find|Read|Sum)|Text(Compare|CompareS)|TrimNewLines)}(?=\s|$)'
       scope: constant.language.nsis
     # WinVer.nsh
-    - match: '(?:^\s*)(?i)\${((At(Least|Most)|Is)(ServicePack|Win(7|8|10|95|98|200(0|3|8(R2)?)|2012|ME|NT4|Vista|XP))|Is(NT|Server))}(?:\s+)'
+    - match: '(?:^\s*)(?i)\${((At(Least|Most)|Is)(ServicePack|Win(7|8\.1|8|10|11|95|98|20(00|03|08(R2)?|12(R2)?)|ME|NT4|Vista|XP))|Is(NT|Server))}(?=\s|$)'
       scope: constant.language.nsis
     # WordFunc.nsh
-    - match: '(?:^\s*)(?i)\${(StrFilterS?|Version(Compare|Convert)|Word(AddS?|Find((2|3)X)?S?|InsertS?|ReplaceS?))}(?:\s+)'
+    - match: '(?:^\s*)(?i)\${(StrFilterS?|Version(Compare|Convert)|Word(AddS?|Find((2|3)X)?S?|InsertS?|ReplaceS?))}(?=\s|$)'
       scope: constant.language.nsis
     # x64.nsh
-    - match: '(?:^\s*)(?i)\${((Disable|Enable)X64FSRedirection|RunningX64)}(?:\s+)'
+    - match: '(?:^\s*)(?i)\${((Disable|Enable)X64FSRedirection|RunningX64)}(?=\s|$)'
       scope: constant.language.nsis
     - match: '{{language}}'
       scope: constant.other.nsis
     - match: '{{definitions}}'
       scope: constant.other.nsis
-    - match: '{{uservar}}'
-      scope: variable.other.nsis
     - match: '{{variable}}'
       scope: variable.language.nsis
+    - match: '{{uservar}}'
+      scope: variable.other.nsis
     - match: '"'
       captures:
         0: punctuation.definition.string.begin.nsis
@@ -86,10 +86,10 @@ contexts:
           scope: constant.character.escape.nsis
         - match: '{{escaped}}'
           scope: constant.character.escape.nsis
-        - match: '{{uservar}}'
-          scope: variable.other.nsis
         - match: '{{variable}}'
           scope: variable.language.nsis
+        - match: '{{uservar}}'
+          scope: variable.other.nsis
         - match: '{{language}}'
           scope: variable.other.nsis
         - match: '{{definitions}}'
@@ -107,10 +107,10 @@ contexts:
           scope: constant.character.escape.nsis
         - match: '{{escaped}}'
           scope: constant.character.escape.nsis
-        - match: '{{uservar}}'
-          scope: variable.other.nsis
         - match: '{{variable}}'
           scope: variable.language.nsis
+        - match: '{{uservar}}'
+          scope: variable.other.nsis
         - match: '{{language}}'
           scope: constant.other.nsis
         - match: '{{definitions}}'
@@ -128,10 +128,10 @@ contexts:
           scope: constant.character.escape.nsis
         - match: '{{escaped}}'
           scope: constant.character.escape.nsis
-        - match: '{{uservar}}'
-          scope: variable.other.nsis
         - match: '{{variable}}'
           scope: variable.language.nsis
+        - match: '{{uservar}}'
+          scope: variable.other.nsis
         - match: '{{language}}'
           scope: constant.other.nsis
         - match: '{{definitions}}'
