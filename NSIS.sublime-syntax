@@ -33,11 +33,6 @@ contexts:
       captures:
         1: keyword.other.nsis
         2: entity.name.constant.define.nsis
-    # Variable declaration
-    - match: '^\s*(?i)(Var)\s+(?:/GLOBAL\s+)?\"?(\w+)\"?'
-      captures:
-        1: keyword.nsis
-        2: entity.name.variable.nsis
     # Section/SectionGroup with explicit ID
     - match: '^\s*(?i)(Section(?:Group)?)\s+(?:/[oe]\s+)?(?:"[^"]*"\s+)(\w+)'
       captures:

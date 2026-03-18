@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>scope</key>
-	<string>entity.name.function.nsis, entity.name.function.macro.nsis, entity.name.constant.define.nsis, entity.name.variable.nsis</string>
+	<string>entity.name.function.nsis, entity.name.function.macro.nsis, entity.name.constant.define.nsis</string>
 	<key>settings</key>
 	<dict>
 		<key>showInSymbolList</key>
