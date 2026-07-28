@@ -1,1 +1,8 @@
+# Normalise line endings: LF in the repository and in the working tree…
+* text=auto eol=lf
+
+# …except batch files, which cmd.exe expects to be CRLF
+*.cmd text eol=crlf
+
+# Keep screenshots out of archives, which Package Control installs
 screenshots/ export-ignore
