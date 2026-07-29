@@ -1,7 +1,5 @@
 #!/bin/bash
 
-# sublime-makensis
-#
 # The MIT License (MIT)
 # Copyright (c) 2015-2023 Jan T. Sott, Derek Willian Stavis
 #
