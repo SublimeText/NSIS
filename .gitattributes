@@ -1,1 +1,6 @@
+* text=auto eol=lf
+*.cmd text eol=crlf
+*.png binary
+
+# Keep screenshots out of archives, which Package Control installs
 screenshots/ export-ignore

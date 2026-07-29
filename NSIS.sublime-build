@@ -1,7 +1,7 @@
 {
-  "cmd": ["sh", "$packages/NSIS/scripts/build.sh", "$file"],
+  "cmd": ["bash", "$packages/NSIS/scripts/build.sh", "$file"],
   "working_dir": "${project_path:${folder}}",
-  "file_regex": ".*rror in script:? \"(^\"]+)\" on line ([0-9]+)",
+  "file_regex": ".*rror in script:? \"([^\"]+)\" on line ([0-9]+)",
   "selector": "source.nsis",
 
   "windows": {
@@ -11,7 +11,7 @@
   "variants": [
     {
       "name": "strict",
-      "cmd": ["sh", "$packages/NSIS/scripts/build.sh", "-WX", "$file"],
+      "cmd": ["bash", "$packages/NSIS/scripts/build.sh", "-WX", "$file"],
       "file_regex": ".*arning: .* \\((...*?):(\\d+)\\)",
       "windows": {
         "cmd": ["$packages\\NSIS\\scripts\\build.cmd", "/WX", "$file"]
