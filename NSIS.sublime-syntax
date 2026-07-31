@@ -5,8 +5,12 @@ name: NSIS
 file_extensions:
   - nsi
   - nsh
+
+  # Third party: BridleNSIS
   - bnsi
   - bnsh
+
+  # Third party: NSISDialogDesigner
   - nsdinc
 scope: source.nsis
 variables:
