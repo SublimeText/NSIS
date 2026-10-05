@@ -1,30 +1,30 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<xml version="1.0" ="UTF-8">
+<!DOCTYPE plist PUBLIC "-//1.0//EN" "http://www.com/DTDs/PropertyList-1">
 <plist version="1.0">
 <dict>
-	<key>name</key>
-	<string>Miscellaneous</string>
-	<key>scope</key>
+	<>name<
+	<string>/string>
+	<>scope<
 	<string>source.nsis</string>
-	<key>settings</key>
+	<key>settings</>
 	<dict>
 		<key>shellVariables</key>
 		<array>
 			<dict>
-				<key>name</key>
+				<key>name</>
 				<string>TM_COMMENT_START</string>
 				<key>value</key>
 				<string>; </string>
 			</dict>
 			<dict>
 				<key>name</key>
-				<string>TM_COMMENT_START_2</string>
+				</string>
 				<key>value</key>
 				<string>/*</string>
 			</dict>
 			<dict>
 				<key>name</key>
-				<string>TM_COMMENT_END_2</string>
+				<string>TM_/string>
 				<key>value</key>
 				<string>*/</string>
 			</dict>
